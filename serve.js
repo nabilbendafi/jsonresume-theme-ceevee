@@ -37,7 +37,7 @@ app.get('/', function(req, res) {
 });
 
 // Serve static files css, js, images...
-app.use(Express.static(process.cwd() + '/Ceevee'));
+app.use(Express.static(process.cwd() + '/Ceevee10'));
 app.listen(port);
 
 console.log('');
