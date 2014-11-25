@@ -49,15 +49,13 @@
             effective visual identities for companies of all sizes around the globe. Let's <a class="smoothscroll" href="#about">start scrolling</a>
             and learn more <a class="smoothscroll" href="#about">about me</a>.</h3>
             <hr />
+            {{#if resume.basics.profiles}}
             <ul class="social">
-               <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-               <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-               <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-               <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-               <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-               <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-               <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                {{#each resume.basics.profiles}}
+                <li><a href="{{url}}" title="{{network}}"><i class="fa fa-{{network}}"></i></a></li>
+                {{/each}}
             </ul>
+            {{/if}}
          </div> <!-- end #banner-text -->
       </div> <!-- end #row banner-->
 
@@ -659,15 +657,13 @@
     <footer>
         <div class="row">
             <div class="twelve columns">
+                {{#if resume.basics.profiles}}
                 <ul class="social-links">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                    <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                    {{#each resume.basics.profiles}}
+                    <li><a href="{{url}}" title="{{network}}"><i class="fa fa-{{network}}"></i></a></li>
+                    {{/each}}
                 </ul>
+                {{/if}}
 
                 <ul class="copyright">
                     <li>&copy; Copyright 2014 CeeVee</li>
