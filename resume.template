@@ -170,7 +170,7 @@
     </div> <!-- Work End -->
     {{/if}}
 
-    {{#if resume.skills}}
+    {{#if resume.skills.length}}
     <div class="row skill">
       <div class="three columns header-col">
         <h1><span>Skills</span></h1>
@@ -179,7 +179,11 @@
       <div class="nine columns main-col">
         <div class="bars">
           <ul class="skills">
-            <li><span class="bar-expand {{level}}"></span><em>{{name}}</em></li>
+            {{#resume.skills}}
+            {{#keywords}}
+            <li><span class="bar-expand {{#lower}}{{../../level}}{{/lower}}"></span><em>{{.}}</em></li>
+            {{/keywords}}
+            {{/resume.skills}}
           </ul>
         </div> <!-- end skill-bars -->
       </div> <!-- main-col end -->

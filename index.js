@@ -50,6 +50,11 @@ function render(resume) {
         });
     }
 
+    // Helper
+    Handlebars.registerHelper('lower', function(options) {
+        return options.fn(this).toLowerCase();
+    });
+
     // renders
     return Handlebars.compile(template)({
         css: css,
