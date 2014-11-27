@@ -179,16 +179,30 @@
       <div class="nine columns main-col">
         <div class="bars">
           <ul class="skills">
-            <li><span class="bar-expand photoshop"></span><em>Photoshop</em></li>
-            <li><span class="bar-expand illustrator"></span><em>Illustrator</em></li>
-            <li><span class="bar-expand wordpress"></span><em>Wordpress</em></li>
-            <li><span class="bar-expand css"></span><em>CSS</em></li>
-            <li><span class="bar-expand html5"></span><em>HTML5</em></li>
-            <li><span class="bar-expand jquery"></span><em>jQuery</em></li>
+            <li><span class="bar-expand {{level}}"></span><em>{{name}}</em></li>
           </ul>
         </div> <!-- end skill-bars -->
       </div> <!-- main-col end -->
     </div> <!-- Skills End -->
+    {{/if}}
+
+    {{#if resume.languages}}
+    <div class="row language">
+      <div class="three columns header-col">
+        <h1><span>Languages</span></h1>
+      </div>
+
+      <div class="nine columns main-col">
+        {{#each resume.languages}}
+        <div class="row item">
+          <div class="twelve columns">
+            <h3>{{position}}</h3>
+            <p class="info">{{language}}<span>&bull;</span>{{fluency}}</p>
+          </div>
+        </div> <!-- item end -->
+        {{/each}}
+      </div> <!-- main-col end -->
+    </div> <!-- Languages End -->
     {{/if}}
   </section> <!-- Resume End-->
 
